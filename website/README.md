@@ -8,6 +8,7 @@
 - 不使用通用紫色渐变，仅在 Hero 顶部使用一处低饱和度径向高光
 - 1px 描边卡片 + 大字标题，参考 Linear / Resend / shadcn.com 的克制极简风
 - 跟随系统亮/暗主题，可手动切换（持久化到 `localStorage`）
+- `public/icon-{32,128}.png` 与扩展图标同源，由 [`../extension/scripts/build-icons.py`](../extension/scripts/build-icons.py) 生成，不要手工替换
 
 ## 国际化
 

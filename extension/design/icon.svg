@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="768" height="768" viewBox="0 0 96 96" role="img" aria-label="115 Auto Save">
+  <title>115 Auto Save · 图标素材</title>
+  <!--
+    96×96 = Chrome Web Store 规定的「实际图标」尺寸。
+    上传用的 128×128 由 scripts/build-icons.py 在四周补 16px 透明内边距生成，
+    不要手工导出满版 128。
+    云朵：两个侧瓣与底边相切（圆心竖线即底边端点），底边平直、无肩角。
+  -->
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2C86E8" />
+      <stop offset="1" stop-color="#1468C8" />
+    </linearGradient>
+    <!-- 白色云朵 + 挖空的下载箭头 -->
+    <mask id="mark" maskUnits="userSpaceOnUse" x="0" y="0" width="96" height="96">
+      <g fill="#FFFFFF">
+        <circle cx="48" cy="45" r="26" />
+        <circle cx="28" cy="60" r="18" />
+        <circle cx="68" cy="60" r="18" />
+        <rect x="28" y="60" width="40" height="18" />
+      </g>
+      <g fill="#000000">
+        <rect x="41" y="28" width="14" height="28" rx="7" />
+        <path d="M35 53 H61 L48 70 Z" stroke="#000000" stroke-width="4.5" stroke-linejoin="round" />
+      </g>
+    </mask>
+  </defs>
+  <rect x="0" y="0" width="96" height="96" rx="21" fill="url(#bg)" />
+  <rect x="0" y="0" width="96" height="96" rx="21" fill="#FFFFFF" mask="url(#mark)" />
+</svg>
