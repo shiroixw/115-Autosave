@@ -46,13 +46,16 @@ extension/
 │   ├── locales/                   # zh_CN.json / en.json
 │   ├── styles/theme.css           # CSS Variables 主题
 │   └── utils/settings.ts          # chrome.storage.sync 封装
-├── public/icon/                   # 16/32/48/128 PNG 图标
+├── design/icon.svg                # 图标唯一矢量源（96×96 图形）
+├── scripts/build-icons.py         # 生成 16/32/48/128 PNG（128 自动补 16px 透明内边距）
+├── public/icon/                   # ↑ 脚本产物，勿手工替换
 └── .output/                       # 构建产物（gitignore）
 ```
 
 ## 上架须知
 
 - `manifest.name` 与 `manifest.description` 使用 `__MSG_*__` 引用，Chrome Web Store 会按用户浏览器语言自动展示对应翻译
+- 128×128 图标必须满足「实际图形 96×96 + 四周各 16px 透明内边距」，由 `python scripts/build-icons.py` 生成，详见 [`store-assets/README.md`](./store-assets/README.md)
 - 需在商店后台准备中英两份"商品详情页"内容（标题/描述/截图）
 - 仅声明了 `storage` 权限和单一域名 `host_permissions`，过审难度低
 
